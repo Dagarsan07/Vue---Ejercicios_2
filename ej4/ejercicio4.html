@@ -20,11 +20,15 @@
     <div id="app">
       <div class="container mx-auto mt-4">
         <div class="row">
-          <div class="col-3">
+          <div class="col-3 mx-auto">
             <h1 class="text-center">Lista de la compra</h1>
-            <input type="text" class="form-control" />
+            <input
+              type="text"
+              class="form-control"
+              @keyup.enter="agregar($event)"
+            />
             <ul>
-              <li v-for=""></li>
+              <li v-for="producto in lista">{{producto}}</li>
             </ul>
           </div>
         </div>
